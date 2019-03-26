@@ -1,0 +1,21 @@
+{
+    "onlineschoolApp": {
+        "klasa": {
+            "home": {
+                "title": "Klasa",
+                "createLabel": "Dodaj Klasa",
+                "createOrEditLabel": "Dodaj lub edytuj: Klasa"
+            },
+            "created": "Utworzono nowy obiekt typu Klasa z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Klasa z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Klasa z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Klasa {{ id }}?"
+            },
+            "detail": {
+                "title": "Klasa"
+            },
+            "nazwaklasi": "Nazwaklasi"
+        }
+    }
+}

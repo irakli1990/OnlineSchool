@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "rodzaj",
+            "fieldType": "Double"
+        }
+    ],
+    "changelogDate": "20190326112951",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "ocena",
+    "databaseType": "sql",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

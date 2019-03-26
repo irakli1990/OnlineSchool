@@ -1,0 +1,24 @@
+{
+    "onlineschoolApp": {
+        "uczen": {
+            "home": {
+                "title": "Uczen",
+                "createLabel": "Dodaj Uczen",
+                "createOrEditLabel": "Dodaj lub edytuj: Uczen"
+            },
+            "created": "Utworzono nowy obiekt typu Uczen z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Uczen z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Uczen z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Uczen {{ id }}?"
+            },
+            "detail": {
+                "title": "Uczen"
+            },
+            "imie": "Imie",
+            "pesel": "Pesel",
+            "dataUrodzenia": "Data Urodzenia",
+            "email": "Email"
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="nauczyciel">
+            <h2><span jhiTranslate="onlineschoolApp.nauczyciel.detail.title">Nauczyciel</span> {{nauczyciel.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onlineschoolApp.nauczyciel.imie">Imie</span></dt>
+                <dd>
+                    <span>{{nauczyciel.imie}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.nauczyciel.nazwisko">Nazwisko</span></dt>
+                <dd>
+                    <span>{{nauczyciel.nazwisko}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.nauczyciel.pesel">Pesel</span></dt>
+                <dd>
+                    <span>{{nauczyciel.pesel}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.nauczyciel.email">Email</span></dt>
+                <dd>
+                    <span>{{nauczyciel.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.nauczyciel.adres">Adres</span></dt>
+                <dd>
+                    <span>{{nauczyciel.adres}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/nauczyciel', nauczyciel.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

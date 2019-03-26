@@ -1,0 +1,79 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-nauczyciel-heading" jhiTranslate="onlineschoolApp.nauczyciel.home.createOrEditLabel">Create or edit a Nauczyciel</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!nauczyciel.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="nauczyciel.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.nauczyciel.imie" for="field_imie">Imie</label>
+                    <input type="text" class="form-control" name="imie" id="field_imie"
+                        [(ngModel)]="nauczyciel.imie" required/>
+                    <div [hidden]="!(editForm.controls.imie?.dirty && editForm.controls.imie?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.imie?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.nauczyciel.nazwisko" for="field_nazwisko">Nazwisko</label>
+                    <input type="text" class="form-control" name="nazwisko" id="field_nazwisko"
+                        [(ngModel)]="nauczyciel.nazwisko" required/>
+                    <div [hidden]="!(editForm.controls.nazwisko?.dirty && editForm.controls.nazwisko?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.nazwisko?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.nauczyciel.pesel" for="field_pesel">Pesel</label>
+                    <input type="text" class="form-control" name="pesel" id="field_pesel"
+                        [(ngModel)]="nauczyciel.pesel" required/>
+                    <div [hidden]="!(editForm.controls.pesel?.dirty && editForm.controls.pesel?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.pesel?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.nauczyciel.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                        [(ngModel)]="nauczyciel.email" required/>
+                    <div [hidden]="!(editForm.controls.email?.dirty && editForm.controls.email?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.email?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.nauczyciel.adres" for="field_adres">Adres</label>
+                    <input type="text" class="form-control" name="adres" id="field_adres"
+                        [(ngModel)]="nauczyciel.adres" required/>
+                    <div [hidden]="!(editForm.controls.adres?.dirty && editForm.controls.adres?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.adres?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

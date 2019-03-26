@@ -1,0 +1,25 @@
+{
+    "onlineschoolApp": {
+        "nauczyciel": {
+            "home": {
+                "title": "Nauczyciel",
+                "createLabel": "Dodaj Nauczyciel",
+                "createOrEditLabel": "Dodaj lub edytuj: Nauczyciel"
+            },
+            "created": "Utworzono nowy obiekt typu Nauczyciel z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Nauczyciel z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Nauczyciel z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Nauczyciel {{ id }}?"
+            },
+            "detail": {
+                "title": "Nauczyciel"
+            },
+            "imie": "Imie",
+            "nazwisko": "Nazwisko",
+            "pesel": "Pesel",
+            "email": "Email",
+            "adres": "Adres"
+        }
+    }
+}

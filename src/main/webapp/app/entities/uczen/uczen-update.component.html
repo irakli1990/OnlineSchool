@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-uczen-heading" jhiTranslate="onlineschoolApp.uczen.home.createOrEditLabel">Create or edit a Uczen</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!uczen.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="uczen.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.uczen.imie" for="field_imie">Imie</label>
+                    <input type="text" class="form-control" name="imie" id="field_imie"
+                        [(ngModel)]="uczen.imie" required/>
+                    <div [hidden]="!(editForm.controls.imie?.dirty && editForm.controls.imie?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.imie?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.uczen.pesel" for="field_pesel">Pesel</label>
+                    <input type="text" class="form-control" name="pesel" id="field_pesel"
+                        [(ngModel)]="uczen.pesel" required/>
+                    <div [hidden]="!(editForm.controls.pesel?.dirty && editForm.controls.pesel?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.pesel?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.uczen.dataUrodzenia" for="field_dataUrodzenia">Data Urodzenia</label>
+                    <div class="input-group">
+                        <input id="field_dataUrodzenia" type="text" class="form-control" name="dataUrodzenia" ngbDatepicker  #dataUrodzeniaDp="ngbDatepicker" [(ngModel)]="uczen.dataUrodzenia"
+                        required/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dataUrodzeniaDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div [hidden]="!(editForm.controls.dataUrodzenia?.dirty && editForm.controls.dataUrodzenia?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.dataUrodzenia?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.uczen.email" for="field_email">Email</label>
+                    <input type="text" class="form-control" name="email" id="field_email"
+                        [(ngModel)]="uczen.email" required/>
+                    <div [hidden]="!(editForm.controls.email?.dirty && editForm.controls.email?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.email?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+    "onlineschoolApp": {
+        "nauczyciel": {
+            "home": {
+                "title": "Teacher",
+                "createLabel": "Create a new Teacher",
+                "createOrEditLabel": "Create or edit a Teacher"
+            },
+            "created": "A new Teacher is created with identifier {{ param }}",
+            "updated": "A Teacher is updated with identifier {{ param }}",
+            "deleted": "A Teacher is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Nauczyciel {{ id }}?"
+            },
+            "detail": {
+                "title": "Teacher"
+            },
+            "imie": "Name",
+            "nazwisko": "Surname",
+            "pesel": "ID",
+            "email": "Email",
+            "adres": "Address"
+        }
+    }
+}

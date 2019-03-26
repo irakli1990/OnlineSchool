@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="uczen">
+            <h2><span jhiTranslate="onlineschoolApp.uczen.detail.title">Uczen</span> {{uczen.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="onlineschoolApp.uczen.imie">Imie</span></dt>
+                <dd>
+                    <span>{{uczen.imie}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.uczen.pesel">Pesel</span></dt>
+                <dd>
+                    <span>{{uczen.pesel}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.uczen.dataUrodzenia">Data Urodzenia</span></dt>
+                <dd>
+                    <span>{{uczen.dataUrodzenia}}</span>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.uczen.email">Email</span></dt>
+                <dd>
+                    <span>{{uczen.email}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/uczen', uczen.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

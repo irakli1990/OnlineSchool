@@ -1,0 +1,21 @@
+{
+    "onlineschoolApp": {
+        "przedmiot": {
+            "home": {
+                "title": "Przedmiot",
+                "createLabel": "Dodaj Przedmiot",
+                "createOrEditLabel": "Dodaj lub edytuj: Przedmiot"
+            },
+            "created": "Utworzono nowy obiekt typu Przedmiot z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Przedmiot z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Przedmiot z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Przedmiot {{ id }}?"
+            },
+            "detail": {
+                "title": "Przedmiot"
+            },
+            "nazwa": "Nazwa"
+        }
+    }
+}

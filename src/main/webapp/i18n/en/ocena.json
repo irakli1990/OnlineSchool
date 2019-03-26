@@ -1,0 +1,21 @@
+{
+    "onlineschoolApp": {
+        "ocena": {
+            "home": {
+                "title": "Mark",
+                "createLabel": "Create a new mark",
+                "createOrEditLabel": "Create or edit a mark"
+            },
+            "created": "A new Mrak is created with identifier {{ param }}",
+            "updated": "A Mark is updated with identifier {{ param }}",
+            "deleted": "A Mark is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete mark {{ id }}?"
+            },
+            "detail": {
+                "title": "Mark"
+            },
+            "rodzaj": "point"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "onlineschoolApp": {
+        "ocena": {
+            "home": {
+                "title": "Ocena",
+                "createLabel": "Dodaj Ocena",
+                "createOrEditLabel": "Dodaj lub edytuj: Ocena"
+            },
+            "created": "Utworzono nowy obiekt typu Ocena z identyfikatorem {{ param }}",
+            "updated": "Uaktualniono obiekt typu Ocena z identyfikatorem {{ param }}",
+            "deleted": "Usunięto obiekt typu Ocena z identyfikatorem {{ param }}",
+            "delete": {
+                "question": "Czy na pewno chcesz usunąć Ocena {{ id }}?"
+            },
+            "detail": {
+                "title": "Ocena"
+            },
+            "rodzaj": "Rodzaj"
+        }
+    }
+}
