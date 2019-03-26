@@ -15,7 +15,8 @@
             "detail": {
                 "title": "Klasa"
             },
-            "nazwaklasi": "Nazwaklasi"
+            "nazwaklasi": "Nazwaklasi",
+            "nauczyciel": "Nauczyciel"
         }
     }
 }

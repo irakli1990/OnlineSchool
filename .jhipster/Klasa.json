@@ -1,7 +1,16 @@
 {
     "fluentMethods": true,
     "clientRootFolder": "",
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "nauczyciel",
+            "otherEntityName": "nauczyciel",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "email",
+            "otherEntityRelationshipName": "klasa",
+            "otherEntityRelationshipNameUndefined": true
+        }
+    ],
     "fields": [
         {
             "fieldName": "nazwaklasi",

@@ -2,20 +2,21 @@
     "onlineschoolApp": {
         "przedmiot": {
             "home": {
-                "title": "Subject",
-                "createLabel": "Create a new Subject",
-                "createOrEditLabel": "Create or edit a Subject"
+                "title": "Przedmiots",
+                "createLabel": "Create a new Przedmiot",
+                "createOrEditLabel": "Create or edit a Przedmiot"
             },
-            "created": "A new Subject is created with identifier {{ param }}",
-            "updated": "A Subject is updated with identifier {{ param }}",
-            "deleted": "A Subject is deleted with identifier {{ param }}",
+            "created": "A new Przedmiot is created with identifier {{ param }}",
+            "updated": "A Przedmiot is updated with identifier {{ param }}",
+            "deleted": "A Przedmiot is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Subject {{ id }}?"
+                "question": "Are you sure you want to delete Przedmiot {{ id }}?"
             },
             "detail": {
-                "title": "Subject"
+                "title": "Przedmiot"
             },
-            "nazwa": "title"
+            "nazwa": "Nazwa",
+            "nauczyciel": "Nauczyciel"
         }
     }
 }

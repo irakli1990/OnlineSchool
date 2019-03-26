@@ -3,8 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
+import { JhiAlertService } from 'ng-jhipster';
 import { IKlasa } from 'app/shared/model/klasa.model';
 import { KlasaService } from './klasa.service';
+import { INauczyciel } from 'app/shared/model/nauczyciel.model';
+import { NauczycielService } from 'app/entities/nauczyciel';
 
 @Component({
     selector: 'jhi-klasa-update',
@@ -14,13 +17,27 @@ export class KlasaUpdateComponent implements OnInit {
     klasa: IKlasa;
     isSaving: boolean;
 
-    constructor(protected klasaService: KlasaService, protected activatedRoute: ActivatedRoute) {}
+    nauczyciels: INauczyciel[];
+
+    constructor(
+        protected jhiAlertService: JhiAlertService,
+        protected klasaService: KlasaService,
+        protected nauczycielService: NauczycielService,
+        protected activatedRoute: ActivatedRoute
+    ) {}
 
     ngOnInit() {
         this.isSaving = false;
         this.activatedRoute.data.subscribe(({ klasa }) => {
             this.klasa = klasa;
         });
+        this.nauczycielService
+            .query()
+            .pipe(
+                filter((mayBeOk: HttpResponse<INauczyciel[]>) => mayBeOk.ok),
+                map((response: HttpResponse<INauczyciel[]>) => response.body)
+            )
+            .subscribe((res: INauczyciel[]) => (this.nauczyciels = res), (res: HttpErrorResponse) => this.onError(res.message));
     }
 
     previousState() {
@@ -47,5 +64,13 @@ export class KlasaUpdateComponent implements OnInit {
 
     protected onSaveError() {
         this.isSaving = false;
+    }
+
+    protected onError(errorMessage: string) {
+        this.jhiAlertService.error(errorMessage, null, null);
+    }
+
+    trackNauczycielById(index: number, item: INauczyciel) {
+        return item.id;
     }
 }

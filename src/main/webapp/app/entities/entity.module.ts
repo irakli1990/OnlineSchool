@@ -23,6 +23,30 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'uczen',
                 loadChildren: './uczen/uczen.module#OnlineschoolUczenModule'
+            },
+            {
+                path: 'klasa',
+                loadChildren: './klasa/klasa.module#OnlineschoolKlasaModule'
+            },
+            {
+                path: 'klasa',
+                loadChildren: './klasa/klasa.module#OnlineschoolKlasaModule'
+            },
+            {
+                path: 'klasa',
+                loadChildren: './klasa/klasa.module#OnlineschoolKlasaModule'
+            },
+            {
+                path: 'klasa',
+                loadChildren: './klasa/klasa.module#OnlineschoolKlasaModule'
+            },
+            {
+                path: 'klasa',
+                loadChildren: './klasa/klasa.module#OnlineschoolKlasaModule'
+            },
+            {
+                path: 'przedmiot',
+                loadChildren: './przedmiot/przedmiot.module#OnlineschoolPrzedmiotModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])

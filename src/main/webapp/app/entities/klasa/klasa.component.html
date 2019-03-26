@@ -16,6 +16,7 @@
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
             <th><span jhiTranslate="onlineschoolApp.klasa.nazwaklasi">Nazwaklasi</span></th>
+            <th><span jhiTranslate="onlineschoolApp.klasa.nauczyciel">Nauczyciel</span></th>
             <th></th>
             </tr>
             </thead>
@@ -23,6 +24,11 @@
             <tr *ngFor="let klasa of klasas ;trackBy: trackId">
                 <td><a [routerLink]="['/klasa', klasa.id, 'view' ]">{{klasa.id}}</a></td>
                 <td>{{klasa.nazwaklasi}}</td>
+                <td>
+                    <div *ngIf="klasa.nauczyciel">
+                        <a [routerLink]="['../nauczyciel', klasa.nauczyciel?.id, 'view' ]" >{{klasa.nauczyciel?.email}}</a>
+                    </div>
+                </td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

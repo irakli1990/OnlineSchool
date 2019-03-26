@@ -9,6 +9,12 @@
                 <dd>
                     <span>{{przedmiot.nazwa}}</span>
                 </dd>
+                <dt><span jhiTranslate="onlineschoolApp.przedmiot.nauczyciel">Nauczyciel</span></dt>
+                <dd>
+                    <div *ngIf="przedmiot.nauczyciel">
+                        <a [routerLink]="['/nauczyciel', przedmiot.nauczyciel?.id, 'view']">{{przedmiot.nauczyciel?.email}}</a>
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"

@@ -15,7 +15,8 @@
             "detail": {
                 "title": "Przedmiot"
             },
-            "nazwa": "Nazwa"
+            "nazwa": "Nazwa",
+            "nauczyciel": "Nauczyciel"
         }
     }
 }

@@ -1,7 +1,18 @@
 {
     "fluentMethods": true,
     "clientRootFolder": "",
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "nauczyciel",
+            "otherEntityName": "nauczyciel",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "email",
+            "ownerSide": true,
+            "useJPADerivedIdentifier": false,
+            "otherEntityRelationshipName": "przedmiot",
+            "otherEntityRelationshipNameUndefined": false
+        }
+    ],
     "fields": [
         {
             "fieldName": "nazwa",

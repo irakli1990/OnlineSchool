@@ -25,6 +25,10 @@ public class Przedmiot implements Serializable {
     @Column(name = "nazwa", nullable = false)
     private String nazwa;
 
+    @OneToOne
+    @JoinColumn(unique = true)
+    private Nauczyciel nauczyciel;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -45,6 +49,19 @@ public class Przedmiot implements Serializable {
 
     public void setNazwa(String nazwa) {
         this.nazwa = nazwa;
+    }
+
+    public Nauczyciel getNauczyciel() {
+        return nauczyciel;
+    }
+
+    public Przedmiot nauczyciel(Nauczyciel nauczyciel) {
+        this.nauczyciel = nauczyciel;
+        return this;
+    }
+
+    public void setNauczyciel(Nauczyciel nauczyciel) {
+        this.nauczyciel = nauczyciel;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

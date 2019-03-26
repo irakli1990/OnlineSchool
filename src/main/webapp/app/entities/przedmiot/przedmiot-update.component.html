@@ -21,6 +21,13 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.przedmiot.nauczyciel" for="field_nauczyciel">Nauczyciel</label>
+                    <select class="form-control" id="field_nauczyciel" name="nauczyciel" [(ngModel)]="przedmiot.nauczyciel">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="nauczycielOption.id === przedmiot.nauczyciel?.id ? przedmiot.nauczyciel : nauczycielOption" *ngFor="let nauczycielOption of nauczyciels; trackBy: trackNauczycielById">{{nauczycielOption.email}}</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
