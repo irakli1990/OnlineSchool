@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Ocena.
+    -->
+    <changeSet id="20190326112951-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="uczen_id"
+                                 baseTableName="ocena"
+                                 constraintName="fk_ocena_uczen_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="uczen"/>
+
+        <addForeignKeyConstraint baseColumnNames="przedmiot_id"
+                                 baseTableName="ocena"
+                                 constraintName="fk_ocena_przedmiot_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="przedmiot"/>
+
+    </changeSet>
+</databaseChangeLog>

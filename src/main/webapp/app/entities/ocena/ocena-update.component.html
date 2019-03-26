@@ -15,6 +15,20 @@
                         [(ngModel)]="ocena.rodzaj" />
                 </div>
 
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.ocena.uczen" for="field_uczen">Uczen</label>
+                    <select class="form-control" id="field_uczen" name="uczen" [(ngModel)]="ocena.uczen" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="uczenOption.id === ocena.uczen?.id ? ocena.uczen : uczenOption" *ngFor="let uczenOption of uczens; trackBy: trackUczenById">{{uczenOption.pesel}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="onlineschoolApp.ocena.przedmiot" for="field_przedmiot">Przedmiot</label>
+                    <select class="form-control" id="field_przedmiot" name="przedmiot" [(ngModel)]="ocena.przedmiot" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="przedmiotOption.id === ocena.przedmiot?.id ? ocena.przedmiot : przedmiotOption" *ngFor="let przedmiotOption of przedmiots; trackBy: trackPrzedmiotById">{{przedmiotOption.nazwa}}</option>
+                    </select>
+                </div>
             </div>
             <div>
                 <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">

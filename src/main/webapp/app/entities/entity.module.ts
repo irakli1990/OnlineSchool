@@ -47,6 +47,18 @@ import { RouterModule } from '@angular/router';
             {
                 path: 'przedmiot',
                 loadChildren: './przedmiot/przedmiot.module#OnlineschoolPrzedmiotModule'
+            },
+            {
+                path: 'uczen',
+                loadChildren: './uczen/uczen.module#OnlineschoolUczenModule'
+            },
+            {
+                path: 'uczen',
+                loadChildren: './uczen/uczen.module#OnlineschoolUczenModule'
+            },
+            {
+                path: 'ocena',
+                loadChildren: './ocena/ocena.module#OnlineschoolOcenaModule'
             }
             /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
         ])

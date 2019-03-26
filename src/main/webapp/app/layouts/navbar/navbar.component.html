@@ -27,31 +27,31 @@
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="entity-menu">
                     <li>
-                        <a class="dropdown-item" routerLink="przedmiot" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                        <a class="dropdown-item" *jhiHasAnyAuthority="['ROLE_ADMIN','ROLE_TEACHER']" routerLink="przedmiot" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span jhiTranslate="global.menu.entities.przedmiot">Przedmiot</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" routerLink="klasa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                        <a class="dropdown-item" *jhiHasAnyAuthority="['ROLE_ADMIN','ROLE_TEACHER']" routerLink="klasa" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span jhiTranslate="global.menu.entities.klasa">Klasa</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" routerLink="ocena" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                        <a class="dropdown-item" *jhiHasAnyAuthority="['ROLE_USER','ROLE_ADMIN','ROLE_TEACHER']" routerLink="ocena" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span jhiTranslate="global.menu.entities.ocena">Ocena</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" routerLink="nauczyciel" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                        <a class="dropdown-item" routerLink="nauczyciel" *jhiHasAnyAuthority="['ROLE_ADMIN','ROLE_TEACHER']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span jhiTranslate="global.menu.entities.nauczyciel">Nauczyciel</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" routerLink="uczen" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                        <a class="dropdown-item" *jhiHasAnyAuthority="['ROLE_TEACHER','ROLE_ADMIN']" routerLink="uczen" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
                             <fa-icon icon="asterisk" fixedWidth="true"></fa-icon>
                             <span jhiTranslate="global.menu.entities.uczen">Uczen</span>
                         </a>

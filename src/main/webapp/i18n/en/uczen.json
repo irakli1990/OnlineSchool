@@ -1,23 +1,23 @@
 {
     "onlineschoolApp": {
-        "Student": {
+        "uczen": {
             "home": {
-                "title": "Student",
-                "createLabel": "Create a new Student",
-                "createOrEditLabel": "Create or edit a Student"
+                "title": "Uczens",
+                "createLabel": "Create a new Uczen",
+                "createOrEditLabel": "Create or edit a Uczen"
             },
-            "created": "A new Student is created with identifier {{ param }}",
-            "updated": "A Student is updated with identifier {{ param }}",
-            "deleted": "A Student is deleted with identifier {{ param }}",
+            "created": "A new Uczen is created with identifier {{ param }}",
+            "updated": "A Uczen is updated with identifier {{ param }}",
+            "deleted": "A Uczen is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Student {{ id }}?"
+                "question": "Are you sure you want to delete Uczen {{ id }}?"
             },
             "detail": {
-                "title": "Student"
+                "title": "Uczen"
             },
-            "imie": "Name",
-            "pesel": "ID",
-            "dataUrodzenia": "Birth date",
+            "imie": "Imie",
+            "pesel": "Pesel",
+            "dataUrodzenia": "Data Urodzenia",
             "email": "Email"
         }
     }

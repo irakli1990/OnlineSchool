@@ -15,7 +15,9 @@
             "detail": {
                 "title": "Ocena"
             },
-            "rodzaj": "Rodzaj"
+            "rodzaj": "Rodzaj",
+            "uczen": "Uczen",
+            "przedmiot": "Przedmiot"
         }
     }
 }

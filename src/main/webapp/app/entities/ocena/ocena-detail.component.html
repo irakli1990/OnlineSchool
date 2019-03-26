@@ -9,6 +9,18 @@
                 <dd>
                     <span>{{ocena.rodzaj}}</span>
                 </dd>
+                <dt><span jhiTranslate="onlineschoolApp.ocena.uczen">Uczen</span></dt>
+                <dd>
+                    <div *ngIf="ocena.uczen">
+                        <a [routerLink]="['/uczen', ocena.uczen?.id, 'view']">{{ocena.uczen?.pesel}}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="onlineschoolApp.ocena.przedmiot">Przedmiot</span></dt>
+                <dd>
+                    <div *ngIf="ocena.przedmiot">
+                        <a [routerLink]="['/przedmiot', ocena.przedmiot?.id, 'view']">{{ocena.przedmiot?.nazwa}}</a>
+                    </div>
+                </dd>
             </dl>
 
             <button type="submit"
@@ -17,7 +29,7 @@
                 <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
             </button>
 
-            <button type="button"
+            <button type="button" *jhiHasAnyAuthority="['ROLE_ADMIN','ROLE_TEACHER']"
                     [routerLink]="['/ocena', ocena.id, 'edit']"
                     class="btn btn-primary">
                 <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>

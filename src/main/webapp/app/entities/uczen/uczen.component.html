@@ -1,7 +1,7 @@
 <div>
     <h2 id="page-heading">
         <span jhiTranslate="onlineschoolApp.uczen.home.title">Uczens</span>
-        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-uczen" [routerLink]="['/uczen/new']">
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-uczen" *jhiHasAnyAuthority="['ROLE_ADMIN','ROLE_TEACHER']" [routerLink]="['/uczen/new']">
             <fa-icon [icon]="'plus'"></fa-icon>
             <span  jhiTranslate="onlineschoolApp.uczen.home.createLabel">
             Create new Uczen

@@ -1,7 +1,24 @@
 {
     "fluentMethods": true,
     "clientRootFolder": "",
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "uczen",
+            "otherEntityName": "uczen",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "pesel",
+            "otherEntityRelationshipName": "ocena",
+            "otherEntityRelationshipNameUndefined": true
+        },
+        {
+            "relationshipName": "przedmiot",
+            "otherEntityName": "przedmiot",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "nazwa",
+            "otherEntityRelationshipName": "ocena",
+            "otherEntityRelationshipNameUndefined": true
+        }
+    ],
     "fields": [
         {
             "fieldName": "rodzaj",

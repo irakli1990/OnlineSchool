@@ -1,6 +1,7 @@
 package com.onlineschool.app.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -23,6 +24,14 @@ public class Ocena implements Serializable {
     @Column(name = "rodzaj")
     private Double rodzaj;
 
+    @ManyToOne
+    @JsonIgnoreProperties("ocenas")
+    private Uczen uczen;
+
+    @ManyToOne
+    @JsonIgnoreProperties("ocenas")
+    private Przedmiot przedmiot;
+
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
         return id;
@@ -43,6 +52,32 @@ public class Ocena implements Serializable {
 
     public void setRodzaj(Double rodzaj) {
         this.rodzaj = rodzaj;
+    }
+
+    public Uczen getUczen() {
+        return uczen;
+    }
+
+    public Ocena uczen(Uczen uczen) {
+        this.uczen = uczen;
+        return this;
+    }
+
+    public void setUczen(Uczen uczen) {
+        this.uczen = uczen;
+    }
+
+    public Przedmiot getPrzedmiot() {
+        return przedmiot;
+    }
+
+    public Ocena przedmiot(Przedmiot przedmiot) {
+        this.przedmiot = przedmiot;
+        return this;
+    }
+
+    public void setPrzedmiot(Przedmiot przedmiot) {
+        this.przedmiot = przedmiot;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

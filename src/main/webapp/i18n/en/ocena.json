@@ -2,20 +2,22 @@
     "onlineschoolApp": {
         "ocena": {
             "home": {
-                "title": "Mark",
-                "createLabel": "Create a new mark",
-                "createOrEditLabel": "Create or edit a mark"
+                "title": "Ocenas",
+                "createLabel": "Create a new Ocena",
+                "createOrEditLabel": "Create or edit a Ocena"
             },
-            "created": "A new Mrak is created with identifier {{ param }}",
-            "updated": "A Mark is updated with identifier {{ param }}",
-            "deleted": "A Mark is deleted with identifier {{ param }}",
+            "created": "A new Ocena is created with identifier {{ param }}",
+            "updated": "A Ocena is updated with identifier {{ param }}",
+            "deleted": "A Ocena is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete mark {{ id }}?"
+                "question": "Are you sure you want to delete Ocena {{ id }}?"
             },
             "detail": {
-                "title": "Mark"
+                "title": "Ocena"
             },
-            "rodzaj": "point"
+            "rodzaj": "Rodzaj",
+            "uczen": "Uczen",
+            "przedmiot": "Przedmiot"
         }
     }
 }
